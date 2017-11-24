@@ -10,15 +10,17 @@
 </title>
 
 <script>
+	
+var in_debug_mode = false;
 
 function changeImageSource()
 {
 	// checks and changes the image source
 	
-alert("You clicked the image !");
+if (in_debug_mode) alert("You clicked the image !");
 
 	var image_src = document.getElementById("image-id").getAttribute("src");
-alert("The current image source is " + image_src);
+if (in_debug_mode) alert("The current image source is " + image_src);
 
 	if(image_src == "http://www.onclick.com/msis110/articles/on-the-charles.jpg")
 	{
@@ -30,7 +32,7 @@ alert("The current image source is " + image_src);
 	}
 
 	document.getElementById("image-id").setAttribute("src", image_src);
-alert("The new image source is " + image_src);
+if (in_debug_mode) alert("The new image source is " + image_src);
 	
 	return true;
 }
@@ -39,10 +41,10 @@ function changeImageSize()
 {
 	// get the width attribute value, and if it is 475 pixels, set it to 100 pixels, else set it to 475 pixels
 
-alert("You want to change the image size !");
+if (in_debug_mode) alert("You want to change the image size !");
 
 	var image_width = document.getElementById("image-id").style.width;
-alert("The current image size is " + image_width);
+if (in_debug_mode) alert("The current image size is " + image_width);
 
 	if(image_width == "475px")
 	{
@@ -55,7 +57,7 @@ alert("The current image size is " + image_width);
 	}
 
 	document.getElementById("image-id").style.width = image_width;
-alert("The new image width is " + image_width);
+if (in_debug_mode) alert("The new image width is " + image_width);
 
 	return true;
 }
