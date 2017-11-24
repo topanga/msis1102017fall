@@ -40,10 +40,11 @@ function changeImageSize()
 alert("You want to change the image size !");
 
 	var image_width = document.getElementById("image-id").style.width;
-alert(image_width);
+alert("The current image size is " + image_width);
 
 	if(image_width == "475px")
 	{
+
 		image_width = "100px";
 	}
 	else
@@ -51,8 +52,9 @@ alert(image_width);
 		image_width = "475px";
 	}
 
-	document.getElementById("image-id").style.width = current_width;
-alert("Done changing image width !");
+	document.getElementById("image-id").style.width = image_width;
+alert("The new image width is " + image_width);
+
 	return true;
 }
 
@@ -68,9 +70,8 @@ alert("Done changing image width !");
      alt="charles river photo" src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" >
 <br />
 <button id="size-button" onclick="changeImageSize();">Change Size</button>
-</p>
 </center>
-
+</p>
 </body>
 
 </html>
