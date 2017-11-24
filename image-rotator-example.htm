@@ -37,14 +37,14 @@ if (is_debug_mode) alert("The new image source is " + image_src);
 	return true;
 }
 
-function changeImageSize()
+function changeImageWidth()
 {
 	// get the width attribute value, and if it is 475 pixels, set it to 100 pixels, else set it to 475 pixels
 
-if (is_debug_mode) alert("You want to change the image size !");
+if (is_debug_mode) alert("You want to change the image width !");
 
 	var image_width = document.getElementById("image-id").style.width;
-if (is_debug_mode) alert("The current image size is " + image_width);
+if (is_debug_mode) alert("The current image width is " + image_width);
 
 	if(image_width == "475px")
 	{
@@ -73,15 +73,20 @@ function changeDebugMode()
 <body>
 
 <center>
-<h1>Click the image to change it !</h1>
+<h1>
+	Click the image to change it !
+</h1>
+
 <p>
 <img id="image-id" style="width:475px;" onclick="changeImageSource();"  
      alt="charles river photo" src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" >
 <br />
-<button id="size-button" onclick="changeImageSize();">Change Size</button>
+<button id="size-button" onclick="changeImageWidth();">Change Image Width</button>
 <button id="debug-button" onclick="changeDebugMode();">Change Debug Mode</button>
-</center>
 </p>
+
+</center>
+
 </body>
 
 </html>
