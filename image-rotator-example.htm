@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 
 <!-- github.com msis110/code-repository c1058927@trbvn.com qwerty99 -->
 <!-- https://github.com/msis110/code-repository -->
 
-<title>Intro To Programming - Images</title>
+<title>
+	Intro To Programming - Images
+</title>
 
 <script>
 
@@ -15,7 +16,7 @@ function changeImage()
 
 //alert("You clicked the image !");
 
-	var current_src = document.getElementById("image-rotator").getAttribute("src");
+	var current_src = document.getElementById("image-id").getAttribute("src");
 //alert(current_src);
 
 	if(current_src == "http://www.onclick.com/msis110/articles/on-the-charles.jpg")
@@ -27,36 +28,35 @@ function changeImage()
 		current_src = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
 	}
 
-	document.getElementById("image-rotator").setAttribute("src", current_src);
+	document.getElementById("image-id").setAttribute("src", current_src);
 
 	return true;
 }
 
 function changeImageSize()
 {
-	// TODO get the width attribute value, if it is 475, set it to 100, else set it to 475
+	// get the width attribute value, and if it is 475 pixels, set it to 100 pixels, else set it to 475 pixels
 
 //alert("You want to change the image size !");
 
-	var current_width = document.getElementById("image-rotator").getAttribute("width");
-//alert(current_width);
+	var image_width = document.getElementById("image-id").style.width;
+//alert(image_width);
 
-	if(current_width == "475")
+	if(image_width == "475px")
 	{
-		current_width = "100";
+		image_width = "100px";
 	}
 	else
 	{
-		current_width = "475";
+		image_width = "475px";
 	}
 
-	document.getElementById("image-rotator").setAttribute("width", current_width);
+	document.getElementById("image-id").style.width = current_width;
 
 	return true;
 }
 
 </script>
-
 </head>
 
 <body>
@@ -64,8 +64,8 @@ function changeImageSize()
 <center>
 <h1>Click the image to change it !</h1>
 <p>
-<img id="image-rotator" onclick="changeImage();" width="475" 
-	alt="charles river photo" src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" >
+<img id="image-id" style="width:475px;" onclick="changeImage();"  
+     alt="charles river photo" src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" >
 <br />
 <button id="size-button" onclick="changeImageSize();">Change Size</button>
 </p>
