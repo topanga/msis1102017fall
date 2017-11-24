@@ -11,7 +11,7 @@
 
 <script>
 
-function changeImage()
+function changeImageSource()
 {
 	// checks and changes the image source
 	
@@ -66,19 +66,15 @@ alert("The new image width is " + image_width);
 <body>
 
 <center>
-	<h1>
-		Click the image to change it !
-	</h1>
-</center>
-	
-<p style="text-align:center;">
-<img id="image-id" style="width:475px;" onclick="changeImage();"  
+<h1>Click the image to change it !</h1>
+<p>
+<img id="image-id" style="width:475px;" onclick="changeImageSource();"  
      alt="charles river photo" src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" >
 <br />
 <button id="size-button" onclick="changeImageSize();">Change Size</button>
 </center>
 </p>
-	
 </body>
 
 </html>
+
