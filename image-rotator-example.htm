@@ -29,7 +29,7 @@ alert("The current image source is " + image_src);
 		image_src = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
 	}
 
-	document.getElementById("image-id").setAttribute("src", image_src;
+	document.getElementById("image-id").setAttribute("src", image_src);
 alert("The new image source is " + image_src);
 	
 	return true;
@@ -66,15 +66,19 @@ alert("The new image width is " + image_width);
 <body>
 
 <center>
-<h1>Click the image to change it !</h1>
-<p>
+	<h1>
+		Click the image to change it !
+	</h1>
+</center>
+	
+<p style="text-align:center;">
 <img id="image-id" style="width:475px;" onclick="changeImage();"  
      alt="charles river photo" src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" >
 <br />
 <button id="size-button" onclick="changeImageSize();">Change Size</button>
 </center>
 </p>
+	
 </body>
 
 </html>
-
