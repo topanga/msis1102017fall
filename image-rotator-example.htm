@@ -13,23 +13,25 @@
 
 function changeImage()
 {
+	// checks and changes the image source
+	
+alert("You clicked the image !");
 
-//alert("You clicked the image !");
+	var image_src = document.getElementById("image-id").getAttribute("src");
+alert("The current image source is " + image_src);
 
-	var current_src = document.getElementById("image-id").getAttribute("src");
-//alert(current_src);
-
-	if(current_src == "http://www.onclick.com/msis110/articles/on-the-charles.jpg")
+	if(image_src == "http://www.onclick.com/msis110/articles/on-the-charles.jpg")
 	{
-		current_src = "http://www.onclick.com/msis110/articles/community-boating-dock.jpg";
+		image_src = "http://www.onclick.com/msis110/articles/community-boating-dock.jpg";
 	}
 	else
 	{
-		current_src = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
+		image_src = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
 	}
 
-	document.getElementById("image-id").setAttribute("src", current_src);
-
+	document.getElementById("image-id").setAttribute("src", image_src;
+alert("The new image source is " + image_src);
+	
 	return true;
 }
 
