@@ -37,10 +37,10 @@ function changeImageSize()
 {
 	// get the width attribute value, and if it is 475 pixels, set it to 100 pixels, else set it to 475 pixels
 
-//alert("You want to change the image size !");
+alert("You want to change the image size !");
 
 	var image_width = document.getElementById("image-id").style.width;
-//alert(image_width);
+alert(image_width);
 
 	if(image_width == "475px")
 	{
@@ -52,7 +52,7 @@ function changeImageSize()
 	}
 
 	document.getElementById("image-id").style.width = current_width;
-
+alert("Done changing image width !");
 	return true;
 }
 
